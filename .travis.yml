@@ -1,0 +1,22 @@
+language: java
+before_install:
+  - chmod +x gradlew
+script:
+  - ./gradlew build --info
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+deploy:
+  provider: heroku
+  api_key:
+    secure: "aGdvJf49Gb5zMi4gNdrr+B56lJieqpyvFa1RYWQij2DSkkLxy7RhFHXomHjAvtlHVTiGx7pQo9A2tFwY7487xehpCfNHBJVTYh3EzxZDAUWaQUjjlIlxncZk3JEvrUwf61IxHMm+tnij+JDbQsaV9ZC/o4
+    jktsO0wwtl+Zupzw+tN6DEoAMSbCCtYLoHBw6UZLjDl2QEYrGYwT6yi2QhnUisAWvjXXuOBRkyYFZCKFblExtd/v3/P5qtQsyVc078klQtNXVPE3fLBllKs0fE8oy70qd+bhFRfwa9gC6vywYp3IaP2yXtEURgRRYp9sc
+    ITH7fXO1KLOZ0OyGYpy1epVshNcuZzKJupdW5UgbLvY7s+fBPZpskk6SIZVCgbyI8kWMaPSnm5xScCvrDKukXaIevyRNCfrqxXnVyFM6xRX43o4v8shoMP9Wd5c4pAGq368L6/VxmayWN9ds2bM3J8/G6rRWGlH5JN3VC
+    xrEqv9dQ8fRenigdcPgiNFC/kETXScfXPZIDAVC0rNlxrMHI/mO9H3RdoxGI6NLX7kzS+V32j0zGOydBnUf4VDPjBqXCln7f4U4pyxbFgcQB4C3YYhejDRumN4hwe221p1GSP9Yfzuada0QbaRvQAAx2gX/b5fc0ag0EZ
+    +1ZPdVBsT41KEJUY5I5FuL/IhhKCeXcPJ8="
+  app: fotis-spy-first-servlet
+  skip_cleanup: true
