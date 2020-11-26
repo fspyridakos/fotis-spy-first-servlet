@@ -12,6 +12,6 @@ cache:
     - $HOME/.gradle/wrapper/
 deploy:
   provider: heroku
-  api_key: 1f13f7f2-25a1-49f7-b8f9-1b3b7c7a2744
+  api_key: "1f13f7f2-25a1-49f7-b8f9-1b3b7c7a2744"
   app: fotis-spy-first-servlet
   skip_cleanup: true
