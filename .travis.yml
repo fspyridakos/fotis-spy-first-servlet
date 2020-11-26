@@ -1,18 +1,18 @@
 language: java
 before_install:
-  - chmod +x gradlew
+- chmod +x gradlew
 script:
-  - ./gradlew build --info
+- "./gradlew build --info"
 before_cache:
-  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
 deploy:
   provider: heroku
   api_key:
-    secure: "RBjjyqDlbP2x+VGgJcWA/kC4hXrjCwpbgCGIx8/FCYalpC+0VuJktV6hGoed49U9G2205TR5Hw6vOl/CcslnBlznCZqqmVp+p2LNbzSQ2tXPU1DtcRei0toprhwpoexILntgwtXmnQIXtw4mRba4CkpWXkoXKjIiIryFxOMocjnJ7AUK+F3h/Cij32kASIFnK5i1PyIHV+k3+WiiwgLX6rEZyHNtYM2w6RW2yCjLqi4N7munYxnXGzz0ZhQCEtRpXz0N7SC6OqBM/4074AlmRiUVYlMIrxoTb5zVnPgty2ZBPUDW2MQlzGG8rP+NlW6OHQ4Wq6XqOnVnh5xlrg2GrA0Jp9bDSJeSaxsGHnsnMb7L5Y1Fpz9s/VRKZZnhhlaxtwhm6U0Kwf9rTKSY7o1+67qkqrzaDmQKH+cfFSeivTHNPMr4ZdxGRiNI3jyJlQ8Z9Itb1u+Yv4SU6Xp0ZR1PiRYLWt27W0jBZ8jStW6+a8vP8r9g808rnH0JtscmYiTD0nRle/wcJvx9c6Ln54D8633PYKptca+2GbrH7QdmQmFEhiIf6WnNGV0hXsDa0b7BEV7x52DkybPQXM8MDvZmp6j9SVAAZ/hRanNTjc0EfeRygVHWi3cnNANnEzzST8yT8T8pjEe1SFJclnE3zMO8wpTXbwh7UAQzh+r0yTOBjsY="
+    secure: Kw+gaYSN62x4Z2rO7CACQL285FyUs11yv9n9kRUT1GSg3fg3bylSSJ4zBebB2AxIXwTY9Mg9+x2rSHxVQ6XQ3O0MrPa6WhCg5Qwn4Xa6G6ykaFoxljfi/H1XuyfsVEe1sOB+bmtxLVG2tlC4POBGh+bOphrADn1jMdiVm08qRCxCwlrUFppUeo/VTM2SH/yp73sa1g+BZ1nC1kzLfdYVFQgmVnOGyrKBj+JVLmcIdEcjflCBHtWiX1TZ+kJmhUvbVV2oYQVovrzqiEHINNUL2KVH4azUajsIpnYxE0k7ROJeYEWCcRp6GOTpjNVIljuyGFDKUtPKFMuQ/uL3XpABbagh4aDBcHVnYPp66ZXw39jfUlu8osFGvWtm+2CAnl4T1BpPt1ryPTw96cYyP10JmUraWa29UHG62Y7QLE2F1DFZGpDTV6uicfZTAeFdX3gkq1h+wdDsTKV3zsX1yvdENE5FFidgxDK4iLL6YyKgOWWCm5hfbIHaYKAO2L2byPpma2lprmK/mHM53egdRESFLs/EoGHRGFG1K9oMEaEmEnBo9DEUpf+nB+cGsutdAkVNfp+95Jf/sww43UAC3dSZ3UJGzjoYb0A/X6sSb2XkbQG+TE/vlg6CQtQQDt9fFthxGtcExjhgfeLPBRZp+i2Ik0r61dt23oNZzTNMTR08Wp4=
   app: fotis-spy-first-servlet
   skip_cleanup: true
